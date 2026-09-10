@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>P.S. Agro | Farmer Direct Onion & Garlic</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,Helvetica,sans-serif;
+ color:#173b28;
+ background:#faf8f0;
+}
+header{
+ background:#145c32;
+ color:white;
+ padding:18px 6%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+}
+.logo{font-size:25px;font-weight:bold}
+nav a{
+ color:white;
+ text-decoration:none;
+ margin-left:22px;
+}
+.hero{
+ padding:80px 7%;
+ background:linear-gradient(135deg,#edf6e8,#fff8e7);
+}
+.hero h1{
+ font-size:52px;
+ max-width:700px;
+ margin:10px 0;
+ color:#104c2b;
+}
+.hero p{
+ font-size:20px;
+ max-width:650px;
+ line-height:1.6;
+ color:#52665a;
+}
+.btn{
+ display:inline-block;
+ background:#e29d27;
+ color:white;
+ padding:14px 22px;
+ border-radius:8px;
+ text-decoration:none;
+ font-weight:bold;
+ margin-top:15px;
+}
+section{padding:65px 7%}
+.title{text-align:center;font-size:36px;color:#145c32}
+.products{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:25px;
+ max-width:900px;
+ margin:auto;
+}
+.card{
+ background:white;
+ padding:35px;
+ border-radius:18px;
+ box-shadow:0 5px 20px #00000012;
+ text-align:center;
+}
+.card .emoji{font-size:65px}
+.card h3{font-size:27px;color:#145c32}
+.card p{color:#607067;line-height:1.6}
+.about{
+ background:#145c32;
+ color:white;
+ text-align:center;
+}
+.about p{
+ max-width:750px;
+ margin:auto;
+ font-size:18px;
+ line-height:1.7;
+ color:#dcebdd;
+}
+.contact{
+ max-width:650px;
+ margin:auto;
+}
+form{
+ background:white;
+ padding:30px;
+ border-radius:18px;
+ box-shadow:0 5px 20px #00000012;
+}
+input,textarea{
+ width:100%;
+ padding:14px;
+ margin:8px 0 18px;
+ border:1px solid #ddd;
+ border-radius:7px;
+ font-size:16px;
+}
+textarea{height:120px}
+button{
+ width:100%;
+ border:0;
+ background:#145c32;
+ color:white;
+ padding:15px;
+ border-radius:8px;
+ font-size:17px;
+ font-weight:bold;
+}
+footer{
+ background:#0c3c22;
+ color:white;
+ text-align:center;
+ padding:30px;
+}
+@media(max-width:700px){
+ nav{display:none}
+ .hero h1{font-size:40px}
+ .products{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">🌱 P.S. Agro</div>
+<nav>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<p><b>FARMER DIRECT • MADHYA PRADESH</b></p>
+
+<h1>From Our Farm to Your Business.</h1>
+
+<p>
+Fresh farm-grown onion and garlic supplied directly from farmers
+to wholesalers, retailers, processors and bulk buyers.
+</p>
+
+<a class="btn" href="#contact">Request a Quote</a>
+</section>
+
+<section id="products">
+
+<h2 class="title">Our Products</h2>
+
+<div class="products">
+
+<div class="card">
+<div class="emoji">🧅</div>
+<h3>Fresh Onion</h3>
+<p>
+Farm-grown onions available for wholesale,
+retail and bulk business requirements.
+</p>
+</div>
+
+<div class="card">
+<div class="emoji">🧄</div>
+<h3>Fresh Garlic</h3>
+<p>
+Farm-grown garlic for traders, retailers,
+processors and bulk buyers.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="about" class="about">
+
+<h2>Why P.S. Agro?</h2>
+
+<p>
+We are farmers first. Our goal is to connect our farm
+directly with genuine buyers and businesses.
+We focus on quality produce, transparent communication
+and dependable supply.
+</p>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Buyer Enquiry</h2>
+
+<div class="contact">
+
+<form onsubmit="sendEmail(event)">
+
+<label>Name / Company</label>
+<input id="name" required placeholder="Your name or company">
+
+<label>Product</label>
+<input id="product" required placeholder="Onion / Garlic">
+
+<label>Quantity</label>
+<input id="quantity" placeholder="Example: 10 tonnes">
+
+<label>Delivery Location</label>
+<input id="location" placeholder="City / State">
+
+<label>Message</label>
+<textarea id="message" placeholder="Tell us your requirement"></textarea>
+
+<button type="submit">Send Enquiry</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+<strong>P.S. Agro</strong>
+<br>
+Farmer Direct • Onion & Garlic
+<br><br>
+© 2026 P.S. Agro
+</footer>
+
+<script>
+function sendEmail(e){
+ e.preventDefault();
+
+ let name=document.getElementById("name").value;
+ let product=document.getElementById("product").value;
+ let quantity=document.getElementById("quantity").value;
+ let location=document.getElementById("location").value;
+ let message=document.getElementById("message").value;
+
+ let email="YOUR_EMAIL_HERE";
+ let subject=encodeURIComponent("P.S. Agro Buyer Enquiry");
+ let body=encodeURIComponent(
+ "Name/Company: "+name+
+ "\nProduct: "+product+
+ "\nQuantity: "+quantity+
+ "\nLocation: "+location+
+ "\nMessage: "+message
+ );
+
+ window.location.href=
+ "mailto:"+email+"?subject="+subject+"&body="+body;
+}
+</script>
+
+</body>
+</html>
