@@ -4,257 +4,1127 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>P.S. Agro | Farmer Direct Onion & Garlic</title>
+<meta name="description" content="P.S Agro Ltd - Farmer-led producer and supplier of premium dehydrated garlic and onion products, mustard oil and groundnut oil.">
+
+<title>P.S Agro Ltd | From Farm to Better Tomorrow</title>
 
 <style>
-*{box-sizing:border-box}
+:root{
+  --green:#174d2b;
+  --green2:#2f7d43;
+  --light:#f5f8f1;
+  --cream:#fbfaf5;
+  --gold:#c9a84e;
+  --text:#172019;
+  --muted:#637064;
+  --white:#fff;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
- margin:0;
- font-family:Arial,Helvetica,sans-serif;
- color:#173b28;
- background:#faf8f0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:var(--cream);
+  line-height:1.6;
 }
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1160px,92%);
+  margin:auto;
+}
+
+/* HEADER */
+
 header{
- background:#145c32;
- color:white;
- padding:18px 6%;
- display:flex;
- justify-content:space-between;
- align-items:center;
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid #e8eee5;
 }
-.logo{font-size:25px;font-weight:bold}
-nav a{
- color:white;
- text-decoration:none;
- margin-left:22px;
+
+.nav{
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
-.hero{
- padding:80px 7%;
- background:linear-gradient(135deg,#edf6e8,#fff8e7);
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  color:var(--green);
 }
-.hero h1{
- font-size:52px;
- max-width:700px;
- margin:10px 0;
- color:#104c2b;
+
+.logo-mark{
+  width:43px;
+  height:43px;
+  border:2px solid var(--green);
+  border-radius:50% 8px 50% 8px;
+  display:grid;
+  place-items:center;
+  font-size:21px;
 }
-.hero p{
- font-size:20px;
- max-width:650px;
- line-height:1.6;
- color:#52665a;
+
+.logo span{
+  display:block;
+  line-height:1.05;
 }
+
+.logo small{
+  display:block;
+  font-size:10px;
+  letter-spacing:2px;
+  color:#748074;
+  font-weight:600;
+}
+
+nav{
+  display:flex;
+  gap:28px;
+  font-size:14px;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:var(--green2);
+}
+
+/* BUTTONS */
+
 .btn{
- display:inline-block;
- background:#e29d27;
- color:white;
- padding:14px 22px;
- border-radius:8px;
- text-decoration:none;
- font-weight:bold;
- margin-top:15px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:13px 20px;
+  border-radius:10px;
+  font-weight:700;
+  border:1px solid transparent;
+  cursor:pointer;
 }
-section{padding:65px 7%}
-.title{text-align:center;font-size:36px;color:#145c32}
+
+.btn-green{
+  background:#16843d;
+  color:#fff;
+}
+
+.btn-outline{
+  border-color:#cbd8ca;
+  color:var(--green);
+  background:#fff;
+}
+
+/* HERO */
+
+.hero{
+  min-height:650px;
+  display:grid;
+  align-items:center;
+  background:
+  linear-gradient(
+    90deg,
+    rgba(10,31,16,.84),
+    rgba(10,31,16,.48),
+    rgba(10,31,16,.12)
+  ),
+  url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1800&q=85")
+  center/cover;
+}
+
+.hero-inner{
+  padding:90px 0;
+  color:#fff;
+  max-width:760px;
+}
+
+.kicker{
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:800;
+  color:#d8e7cf;
+  margin-bottom:18px;
+}
+
+h1{
+  font-family:Georgia,serif;
+  font-size:clamp(46px,6vw,76px);
+  line-height:1.02;
+  margin-bottom:22px;
+}
+
+.hero p{
+  font-size:19px;
+  max-width:650px;
+  color:#eef4eb;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.hero .btn-outline{
+  background:rgba(255,255,255,.12);
+  color:#fff;
+  border-color:rgba(255,255,255,.6);
+}
+
+/* FEATURES */
+
+.strip{
+  background:#fff;
+  border-bottom:1px solid #e6ece4;
+}
+
+.strip-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  padding:23px 0;
+}
+
+.feature{
+  text-align:center;
+  font-size:13px;
+  font-weight:700;
+  color:var(--green);
+}
+
+.feature b{
+  display:block;
+  font-size:25px;
+  margin-bottom:3px;
+}
+
+/* SECTIONS */
+
+section{
+  padding:82px 0;
+}
+
+.section-head{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 45px;
+}
+
+.eyebrow{
+  color:var(--green2);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+h2{
+  font-family:Georgia,serif;
+  font-size:clamp(34px,4vw,50px);
+  line-height:1.1;
+  margin:10px 0 14px;
+  color:var(--green);
+}
+
+.section-head p{
+  color:var(--muted);
+}
+
+/* PRODUCTS */
+
 .products{
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:25px;
- max-width:900px;
- margin:auto;
+  background:var(--light);
 }
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
 .card{
- background:white;
- padding:35px;
- border-radius:18px;
- box-shadow:0 5px 20px #00000012;
- text-align:center;
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid #e1e9de;
+  box-shadow:0 8px 30px rgba(28,64,37,.06);
+  transition:.25s;
 }
-.card .emoji{font-size:65px}
-.card h3{font-size:27px;color:#145c32}
-.card p{color:#607067;line-height:1.6}
-.about{
- background:#145c32;
- color:white;
- text-align:center;
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 14px 35px rgba(28,64,37,.12);
 }
-.about p{
- max-width:750px;
- margin:auto;
- font-size:18px;
- line-height:1.7;
- color:#dcebdd;
+
+.card-img{
+  height:220px;
+  background-size:cover;
+  background-position:center;
 }
+
+.card-body{
+  padding:23px;
+}
+
+.card h3{
+  font-family:Georgia,serif;
+  font-size:25px;
+  color:var(--green);
+  margin-bottom:6px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.badge{
+  display:inline-block;
+  margin-top:15px;
+  padding:6px 10px;
+  border-radius:20px;
+  background:#eef6ea;
+  color:var(--green);
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+/* FARM STORY */
+
+.farm{
+  background:var(--green);
+  color:#fff;
+}
+
+.farm-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.farm-photo{
+  min-height:480px;
+  border-radius:22px;
+  background:
+  url("https://images.unsplash.com/photo-1592982537447-6f2a6a0a6e16?auto=format&fit=crop&w=1200&q=85")
+  center/cover;
+}
+
+.farm h2{
+  color:#fff;
+}
+
+.farm p{
+  color:#dce9dd;
+  margin:15px 0;
+}
+
+.points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:25px;
+}
+
+.point{
+  border-top:1px solid rgba(255,255,255,.25);
+  padding-top:14px;
+}
+
+.point strong{
+  display:block;
+  color:#fff;
+}
+
+.point span{
+  font-size:13px;
+  color:#c7d8c9;
+}
+
+/* QUALITY */
+
+.quality{
+  background:#fff;
+}
+
+.quality-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.q{
+  padding:28px;
+  border-radius:16px;
+  background:var(--light);
+  border:1px solid #e0e9de;
+}
+
+.q-icon{
+  font-size:28px;
+  margin-bottom:12px;
+}
+
+.q h3{
+  color:var(--green);
+  margin-bottom:5px;
+}
+
+.q p{
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* CONTACT */
+
 .contact{
- max-width:650px;
- margin:auto;
+  background:linear-gradient(135deg,#edf5e8,#fff);
 }
-form{
- background:white;
- padding:30px;
- border-radius:18px;
- box-shadow:0 5px 20px #00000012;
+
+.contact-box{
+  background:#fff;
+  border:1px solid #dce7d9;
+  border-radius:24px;
+  padding:50px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  box-shadow:0 15px 45px rgba(35,75,42,.08);
 }
-input,textarea{
- width:100%;
- padding:14px;
- margin:8px 0 18px;
- border:1px solid #ddd;
- border-radius:7px;
- font-size:16px;
+
+.contact-box h2{
+  margin-top:5px;
 }
-textarea{height:120px}
-button{
- width:100%;
- border:0;
- background:#145c32;
- color:white;
- padding:15px;
- border-radius:8px;
- font-size:17px;
- font-weight:bold;
+
+.contact-box p{
+  color:var(--muted);
 }
+
+.contact-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* FOOTER */
+
 footer{
- background:#0c3c22;
- color:white;
- text-align:center;
- padding:30px;
+  background:#0e2f1a;
+  color:#cbd9cd;
+  padding:38px 0;
 }
-@media(max-width:700px){
- nav{display:none}
- .hero h1{font-size:40px}
- .products{grid-template-columns:1fr}
+
+.footer-grid{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:center;
+}
+
+footer .logo{
+  color:#fff;
+}
+
+footer .logo small{
+  color:#9eb0a1;
+}
+
+.footer-right{
+  text-align:right;
+  font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  nav{
+    display:none;
+  }
+
+  .grid,
+  .quality-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .farm-grid{
+    grid-template-columns:1fr;
+  }
+
+  .farm-photo{
+    min-height:340px;
+  }
+
+  .strip-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .contact-box{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:32px;
+  }
+}
+
+@media(max-width:560px){
+
+  .grid,
+  .quality-grid,
+  .strip-grid,
+  .points{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:60px 0;
+  }
+
+  .hero{
+    min-height:620px;
+  }
+
+  .hero-inner{
+    padding:65px 0;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .contact-box{
+    padding:26px;
+  }
+
+  .footer-grid{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-right{
+    text-align:left;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-<div class="logo">🌱 P.S. Agro</div>
-<nav>
-<a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
+  <div class="container nav">
+
+    <a href="#home" class="logo">
+      <div class="logo-mark">🌿</div>
+
+      <span>
+        P.S AGRO LTD
+        <small>FROM FARM TO BETTER TOMORROW</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="#about">Our Farm</a>
+      <a href="#products">Products</a>
+      <a href="#quality">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a
+      class="btn btn-green"
+      href="https://wa.me/918770969514?text=Hello%20P.S%20Agro%20Ltd%2C%20I%20am%20interested%20in%20your%20agro%20products."
+      target="_blank">
+      WhatsApp Us
+    </a>
+
+  </div>
 </header>
 
-<section class="hero">
-<p><b>FARMER DIRECT • MADHYA PRADESH</b></p>
 
-<h1>From Our Farm to Your Business.</h1>
+<main>
 
-<p>
-Fresh farm-grown onion and garlic supplied directly from farmers
-to wholesalers, retailers, processors and bulk buyers.
-</p>
+<!-- HERO -->
 
-<a class="btn" href="#contact">Request a Quote</a>
-</section>
+<section id="home" class="hero">
 
-<section id="products">
+  <div class="container hero-inner">
 
-<h2 class="title">Our Products</h2>
+    <div class="kicker">
+      Farmer • Producer • Supplier
+    </div>
 
-<div class="products">
+    <h1>
+      From Our Farm to Your Business.
+    </h1>
 
-<div class="card">
-<div class="emoji">🧅</div>
-<h3>Fresh Onion</h3>
-<p>
-Farm-grown onions available for wholesale,
-retail and bulk business requirements.
-</p>
-</div>
+    <p>
+      P.S Agro Ltd brings you quality dehydrated garlic and onion products,
+      along with traditional mustard and groundnut oils — produced with care,
+      sourced from farming, and supplied for businesses.
+    </p>
 
-<div class="card">
-<div class="emoji">🧄</div>
-<h3>Fresh Garlic</h3>
-<p>
-Farm-grown garlic for traders, retailers,
-processors and bulk buyers.
-</p>
-</div>
+    <div class="hero-buttons">
 
-</div>
-</section>
+      <a
+        class="btn btn-green"
+        href="https://wa.me/918770969514?text=Hello%20P.S%20Agro%20Ltd%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+        target="_blank">
+        💬 Make an Inquiry
+      </a>
 
-<section id="about" class="about">
+      <a class="btn btn-outline" href="#products">
+        Explore Products
+      </a>
 
-<h2>Why P.S. Agro?</h2>
+    </div>
 
-<p>
-We are farmers first. Our goal is to connect our farm
-directly with genuine buyers and businesses.
-We focus on quality produce, transparent communication
-and dependable supply.
-</p>
+  </div>
 
 </section>
 
-<section id="contact">
 
-<h2 class="title">Buyer Enquiry</h2>
+<!-- FEATURES -->
 
-<div class="contact">
+<div class="strip">
 
-<form onsubmit="sendEmail(event)">
+  <div class="container strip-grid">
 
-<label>Name / Company</label>
-<input id="name" required placeholder="Your name or company">
+    <div class="feature">
+      <b>🌱</b>
+      Farmer Led
+    </div>
 
-<label>Product</label>
-<input id="product" required placeholder="Onion / Garlic">
+    <div class="feature">
+      <b>☀️</b>
+      Farm Sourced
+    </div>
 
-<label>Quantity</label>
-<input id="quantity" placeholder="Example: 10 tonnes">
+    <div class="feature">
+      <b>✦</b>
+      Dehydrated Products
+    </div>
 
-<label>Delivery Location</label>
-<input id="location" placeholder="City / State">
+    <div class="feature">
+      <b>📦</b>
+      Bulk Supply
+    </div>
 
-<label>Message</label>
-<textarea id="message" placeholder="Tell us your requirement"></textarea>
-
-<button type="submit">Send Enquiry</button>
-
-</form>
+  </div>
 
 </div>
 
+
+<!-- OUR FARM -->
+
+<section id="about" class="farm">
+
+  <div class="container farm-grid">
+
+    <div class="farm-photo"></div>
+
+    <div>
+
+      <div class="eyebrow">
+        Our Story
+      </div>
+
+      <h2>
+        Farmers at the heart of P.S Agro Ltd.
+      </h2>
+
+      <p>
+        We are building P.S Agro Ltd from the ground up as farmers and
+        producers. Our focus is simple: grow and source good agricultural
+        produce, process it responsibly, and deliver useful food ingredients
+        to customers.
+      </p>
+
+      <p>
+        Our main focus is dehydration — helping preserve the value of onion
+        and garlic beyond the harvest season while creating consistent
+        ingredients for food businesses.
+      </p>
+
+      <div class="points">
+
+        <div class="point">
+          <strong>🌾 Farm connection</strong>
+          <span>
+            Closer connection to agricultural produce.
+          </span>
+        </div>
+
+        <div class="point">
+          <strong>🔪 Careful processing</strong>
+          <span>
+            Garlic and onion in practical formats.
+          </span>
+        </div>
+
+        <div class="point">
+          <strong>📦 Business supply</strong>
+          <span>
+            Suitable for wholesale and bulk requirements.
+          </span>
+        </div>
+
+        <div class="point">
+          <strong>🤝 Direct communication</strong>
+          <span>
+            Talk directly with us for your requirement.
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- PRODUCTS -->
+
+<section id="products" class="products">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Our Products
+      </div>
+
+      <h2>
+        Dehydrated Goodness, Naturally.
+      </h2>
+
+      <p>
+        Our core range is focused on garlic and onion.
+        We also supply mustard oil and groundnut oil.
+      </p>
+
+    </div>
+
+
+    <div class="grid">
+
+      <!-- GARLIC POWDER -->
+
+      <article class="card">
+
+        <div
+          class="card-img"
+          style="background-image:url('https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=900&q=80')">
+        </div>
+
+        <div class="card-body">
+
+          <h3>Garlic Powder</h3>
+
+          <p>
+            Fine garlic powder for food preparation,
+            seasoning and ingredient applications.
+          </p>
+
+          <span class="badge">
+            Dehydrated
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- GARLIC SLICES -->
+
+      <article class="card">
+
+        <div
+          class="card-img"
+          style="background-image:url('https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=900&q=80')">
+        </div>
+
+        <div class="card-body">
+
+          <h3>Garlic Slices</h3>
+
+          <p>
+            Convenient dehydrated garlic slices for
+            processing and food applications.
+          </p>
+
+          <span class="badge">
+            Dehydrated
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- GARLIC PASTE -->
+
+      <article class="card">
+
+        <div
+          class="card-img"
+          style="background-image:url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80')">
+        </div>
+
+        <div class="card-body">
+
+          <h3>Garlic Paste</h3>
+
+          <p>
+            Garlic paste for convenient use where a
+            ready-to-use garlic ingredient is required.
+          </p>
+
+          <span class="badge">
+            Garlic
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- ONION POWDER -->
+
+      <article class="card">
+
+        <div
+          class="card-img"
+          style="background-image:url('https://images.unsplash.com/photo-1580201092675-a0a6a6cafbb1?auto=format&fit=crop&w=900&q=80')">
+        </div>
+
+        <div class="card-body">
+
+          <h3>Onion Powder</h3>
+
+          <p>
+            Dehydrated onion powder for consistent flavour
+            and convenient storage.
+          </p>
+
+          <span class="badge">
+            Dehydrated
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- ONION SLICES -->
+
+      <article class="card">
+
+        <div
+          class="card-img"
+          style="background-image:url('https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=900&q=80')">
+        </div>
+
+        <div class="card-body">
+
+          <h3>Onion Slices</h3>
+
+          <p>
+            Dehydrated onion slices designed for practical
+            food and ingredient applications.
+          </p>
+
+          <span class="badge">
+            Dehydrated
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- ONION PASTE -->
+
+      <article class="card">
+
+        <div
+          class="card-img"
+          style="background-image:url('https://images.unsplash.com/photo-1610450949065-1f284f6f5f8b?auto=format&fit=crop&w=900&q=80')">
+        </div>
+
+        <div class="card-body">
+
+          <h3>Onion Paste</h3>
+
+          <p>
+            Ready-to-use onion paste for convenient food
+            preparation and processing.
+          </p>
+
+          <span class="badge">
+            Onion
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- MUSTARD OIL -->
+
+      <article class="card">
+
+        <div
+          class="card-img"
+          style="background-image:url('https://images.unsplash.com/photo-1604908177522-432c0f5fdb7f?auto=format&fit=crop&w=900&q=80')">
+        </div>
+
+        <div class="card-body">
+
+          <h3>Mustard Oil</h3>
+
+          <p>
+            Mustard oil supplied for customers looking
+            for a traditional edible oil.
+          </p>
+
+          <span class="badge">
+            Edible Oil
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- GROUNDNUT OIL -->
+
+      <article class="card">
+
+        <div
+          class="card-img"
+          style="background-image:url('https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=900&q=80')">
+        </div>
+
+        <div class="card-body">
+
+          <h3>Groundnut Oil</h3>
+
+          <p>
+            Groundnut oil with a familiar nutty character
+            and everyday culinary use.
+          </p>
+
+          <span class="badge">
+            Edible Oil
+          </span>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY US -->
+
+<section id="quality" class="quality">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Why P.S Agro
+      </div>
+
+      <h2>
+        Built by Farmers. Focused on Quality.
+      </h2>
+
+      <p>
+        We believe agricultural products should be handled with care
+        from the farm through processing and supply.
+      </p>
+
+    </div>
+
+
+    <div class="quality-grid">
+
+      <div class="q">
+
+        <div class="q-icon">
+          🌱
+        </div>
+
+        <h3>
+          Farmer-led
+        </h3>
+
+        <p>
+          We understand the produce because farming is at
+          the foundation of our business.
+        </p>
+
+      </div>
+
+
+      <div class="q">
+
+        <div class="q-icon">
+          ☀️
+        </div>
+
+        <h3>
+          Harvest focused
+        </h3>
+
+        <p>
+          Dehydration helps extend the usefulness of onion
+          and garlic beyond the fresh harvest.
+        </p>
+
+      </div>
+
+
+      <div class="q">
+
+        <div class="q-icon">
+          📦
+        </div>
+
+        <h3>
+          Bulk & Business Supply
+        </h3>
+
+        <p>
+          Talk to us about your quantity, packaging and
+          regular supply requirements.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+  <div class="container">
+
+    <div class="contact-box">
+
+      <div>
+
+        <div class="eyebrow">
+          Get in touch
+        </div>
+
+        <h2>
+          Have a requirement?
+        </h2>
+
+        <p>
+          Send us your product, quantity and delivery requirement.
+          We will connect with you directly.
+        </p>
+
+      </div>
+
+
+      <div class="contact-actions">
+
+        <a
+          class="btn btn-green"
+          href="https://wa.me/918770969514?text=Hello%20P.S%20Agro%20Ltd%2C%20I%20would%20like%20to%20discuss%20a%20product%20requirement."
+          target="_blank">
+          💬 Chat on WhatsApp
+        </a>
+
+        <a
+          class="btn btn-outline"
+          href="mailto:honeyparmar@gmail.com">
+          ✉ Email Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
 
 <footer>
-<strong>P.S. Agro</strong>
-<br>
-Farmer Direct • Onion & Garlic
-<br><br>
-© 2026 P.S. Agro
+
+  <div class="container footer-grid">
+
+    <a href="#home" class="logo">
+
+      <div class="logo-mark">
+        🌿
+      </div>
+
+      <span>
+        P.S AGRO LTD
+        <small>FROM FARM TO BETTER TOMORROW</small>
+      </span>
+
+    </a>
+
+
+    <div class="footer-right">
+
+      WhatsApp: +91 87709 69514<br>
+
+      Email: honeyparmar@gmail.com<br>
+
+      © 2026 P.S Agro Ltd. All rights reserved.
+
+    </div>
+
+  </div>
+
 </footer>
-
-<script>
-function sendEmail(e){
- e.preventDefault();
-
- let name=document.getElementById("name").value;
- let product=document.getElementById("product").value;
- let quantity=document.getElementById("quantity").value;
- let location=document.getElementById("location").value;
- let message=document.getElementById("message").value;
-
- let email="YOUR_EMAIL_HERE";
- let subject=encodeURIComponent("P.S. Agro Buyer Enquiry");
- let body=encodeURIComponent(
- "Name/Company: "+name+
- "\nProduct: "+product+
- "\nQuantity: "+quantity+
- "\nLocation: "+location+
- "\nMessage: "+message
- );
-
- window.location.href=
- "mailto:"+email+"?subject="+subject+"&body="+body;
-}
-</script>
 
 </body>
 </html>
